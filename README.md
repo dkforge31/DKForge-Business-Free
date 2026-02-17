@@ -25,7 +25,7 @@ This repository contains a **fully functional free theme**, not a demo.
 
 ![Login Page](SCREENSHOTS/login-page.png)
 ![Register Page](SCREENSHOTS/registration-page.png)
-![Email Template](screenshots/email-reset-password-template.png)
+![Email Template](SCREENSHOTS/email-reset-password-template.png)
 
 ---
 
