@@ -29,7 +29,7 @@
     <#elseif section = "info">
         <#if !isAppInitiatedAction??>
             <div class="kc-content-wrapper-business">
-                <p class="kc-instruction-business">
+                <p class="kc-instruction-business kc-registration-info">
                     ${msg("emailVerifyInstruction2")}
                     <br/>
                     <a href="${url.loginAction}" class="kc-link-business">${msg("doClickHere")}</a> ${msg("emailVerifyInstruction3")}

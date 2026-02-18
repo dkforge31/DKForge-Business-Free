@@ -535,19 +535,155 @@ html, body {
     color: var(--secondary-color);
 }
 
-/* Responsive Business OTP */
+/* WebAuthn Authenticate Button Styling */
+#authenticateWebAuthnButton {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+    border: none !important;
+    color: white !important;
+    padding: 14px 28px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+#authenticateWebAuthnButton:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 8px 20px rgba(30, 58, 95, 0.4) !important;
+}
+
+#authenticateWebAuthnButton:active {
+    transform: translateY(-1px) !important;
+}
+
+#authenticateWebAuthnButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(13, 123, 162, 0.2), 0 4px 12px rgba(30, 58, 95, 0.3) !important;
+}
+
+/* Authenticator List Items Styling */
+.kcSelectAuthListItem {
+    padding: 18px 20px !important;
+    margin: 12px 0 !important;
+    border: 2px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    background: var(--bg-white) !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.kcSelectAuthListItem:hover {
+    border-color: var(--accent-color) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(13, 123, 162, 0.15) !important;
+    background: linear-gradient(135deg, rgba(30, 58, 95, 0.02) 0%, rgba(13, 123, 162, 0.02) 100%) !important;
+}
+
+.kcSelectAuthListItem:focus-within {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 4px rgba(13, 123, 162, 0.2) !important;
+}
+
+/* Authenticator Icon */
+.kcSelectAuthListItemIcon {
+    font-size: 1.8rem !important;
+    color: var(--accent-color) !important;
+    margin-right: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.kcSelectAuthListItem:hover .kcSelectAuthListItemIcon {
+    transform: scale(1.15) rotate(5deg) !important;
+}
+
+/* Authenticator Body Content */
+.kcSelectAuthListItemBody {
+    flex: 1;
+}
+
+.kcSelectAuthListItemHeading {
+    font-weight: 600 !important;
+    color: var(--text-dark) !important;
+    margin-bottom: 4px !important;
+}
+
+.kcSelectAuthListItemDescription {
+    font-size: 0.85rem !important;
+    color: var(--text-light) !important;
+}
+
+/* Login Username Field Styling */
+#username {
+    padding: 12px 14px !important;
+    border: 2px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    color: var(--text-dark) !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    background: var(--bg-white) !important;
+}
+
+#username:focus {
+    outline: none;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 0 4px rgba(13, 123, 162, 0.1), 0 2px 8px rgba(13, 123, 162, 0.15) !important;
+}
+
+#username:hover:not(:focus) {
+    border-color: var(--secondary-color) !important;
+}
+
+/* Username Label Styling */
+label[for="username"] {
+    font-weight: 600 !important;
+    color: var(--text-dark) !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+
+/* Login Form Buttons */
+form .kcButton {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3) !important;
+}
+
+form .kcButton:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 8px 20px rgba(30, 58, 95, 0.4) !important;
+}
+
+form .kcButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(13, 123, 162, 0.2), 0 4px 12px rgba(30, 58, 95, 0.3) !important;
+}
+
+/* Responsive Business WebAuthn */
 @media (max-width: 768px) {
-    .kc-business-otp-selector {
-        gap: 12px;
-        padding: 12px;
+    #authenticateWebAuthnButton {
+        padding: 12px 20px !important;
+        font-size: 0.95rem !important;
     }
 
-    .kc-business-otp-radio {
-        width: 18px;
-        height: 18px;
+    .kcSelectAuthListItem {
+        padding: 14px 16px !important;
     }
 
-    .kc-business-otp-label {
-        font-size: 14px;
+    .kcSelectAuthListItemIcon {
+        font-size: 1.5rem !important;
+        margin-right: 12px !important;
+    }
+
+    #username {
+        padding: 10px 12px !important;
+        font-size: 0.95rem !important;
     }
 }

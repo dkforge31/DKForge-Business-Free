@@ -50,7 +50,7 @@
                              class="kc-qr-animated"
                              src="data:image/png;base64, ${totp.totpSecretQrCode}"
                              alt="QR Code">
-                        <p><a href="${totp.manualUrl}" class="kc-link-animated">${msg("loginTotpUnableToScan")}</a></p>
+                        <p class="kc-registration-info"><a href="${totp.manualUrl}" class="kc-link-animated">${msg("loginTotpUnableToScan")}</a></p>
                     </li>
                 </#if>
 

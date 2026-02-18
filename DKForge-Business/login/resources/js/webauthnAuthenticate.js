@@ -1,4 +1,30 @@
-import { base64url } from "rfc4648";
+// Base64URL encoding/decoding functions (replaces rfc4648)
+const base64url = {
+    parse: function(input, options) {
+        // Convert base64url string to Uint8Array
+        let str = input.replace(/-/g, '+').replace(/_/g, '/');
+        // Add padding if needed
+        while (str.length % 4) {
+            str += '=';
+        }
+        const binary = atob(str);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) {
+            bytes[i] = binary.charCodeAt(i);
+        }
+        return bytes;
+    },
+    stringify: function(input, options) {
+        // Convert Uint8Array to base64url string
+        let binary = '';
+        for (let i = 0; i < input.length; i++) {
+            binary += String.fromCharCode(input[i]);
+        }
+        let base64 = btoa(binary);
+        let base64url = base64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
+        return base64url;
+    }
+};
 
 // singleton
 let abortController = undefined;
