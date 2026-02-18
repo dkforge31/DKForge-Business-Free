@@ -279,23 +279,33 @@ html, body {
     text-align: center;
     color: var(--text-light);
     font-size: 0.9rem;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .kc-social-buttons {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kc-social-buttons li {
+    margin: 0;
+    padding: 0;
 }
 
 .kc-social-button {
-    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
     border: 1px solid var(--border-color);
     border-radius: 6px;
     background: var(--bg-light);
     color: var(--text-dark);
     text-decoration: none;
-    text-align: center;
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.2s ease;
@@ -306,6 +316,24 @@ html, body {
     background: var(--bg-white);
     border-color: var(--accent-color);
     color: var(--accent-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(13, 123, 162, 0.15);
+}
+
+.kc-social-button:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(13, 123, 162, 0.15), 0 2px 8px rgba(13, 123, 162, 0.15);
+}
+
+.kc-social-button i {
+    font-size: 1.2rem;
+    color: inherit;
+    flex-shrink: 0;
+}
+
+.kc-social-button .provider-name {
+    display: inline-block;
 }
 
 .kc-registration-info {

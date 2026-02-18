@@ -8,7 +8,7 @@
     </div>
 </#macro>
 
-<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=true isLoginPage=false>
+<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=true>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,6 +65,8 @@
 
                 <div class="kc-form-container">
                     <#nested "form">
+
+                    <#nested "socialProviders">
                 </div>
 
                 <#if displayInfo>
